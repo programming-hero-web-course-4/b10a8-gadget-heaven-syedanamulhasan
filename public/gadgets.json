@@ -1,0 +1,156 @@
+[
+    {
+      "product_id": "P001",
+      "product_title": "Apple MacBook Pro 14\" M2",
+      "product_image": "https://i.ibb.co.com/S7tC8Wt/macbook.jpg",
+      "category": "Laptop",
+      "price": 1999.99,
+      "description": "High-performance laptop with M2 Pro chip, Retina display, and long battery life.",
+      "Specification": {
+        "Processor": "Apple M2 Pro",
+        "Display": "14.2-inch Liquid Retina XDR",
+        "Storage": "512GB SSD",
+        "RAM": "16GB Unified Memory",
+        "Battery Life": "18 hours"
+      },
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "P002",
+      "product_title": "Samsung Galaxy Z Fold 5",
+      "product_image": "https://i.ibb.co.com/hZfxvJg/galaxy-z-fold5-highlights-multitasking-mo.jpg",
+      "category": "Phone",
+      "price": 1799.99,
+      "description": "Revolutionary foldable smartphone with 7.6-inch AMOLED display and flagship performance.",
+      "Specification": {
+        "Processor": "Snapdragon 8 Gen 2",
+        "Display": "7.6-inch Dynamic AMOLED 2X",
+        "Storage": "512GB",
+        "Camera": "50MP + 12MP + 10MP",
+        "Battery": "4400mAh"
+      },
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "P003",
+      "product_title": "Logitech MX Master 3S",
+      "product_image": "https://i.ibb.co.com/NCNQ71n/61ni3t1ry-QL-AC-SL1500.jpg",
+      "category": "Accessory",
+      "price": 99.99,
+      "description": "Advanced ergonomic wireless mouse with ultra-fast scrolling and customizable buttons.",
+      "Specification": {
+        "Connectivity": "Bluetooth, USB Receiver",
+        "Battery Life": "70 days per charge",
+        "Sensor": "8K DPI Laser",
+        "Weight": "141g",
+        "Compatibility": "Windows, Mac, Linux"
+      },
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "P004",
+      "product_title": "Apple Watch Ultra",
+      "product_image": "https://i.ibb.co.com/9th70kY/images.jpg",
+      "category": "Smartwatch",
+      "price": 799.99,
+      "description": "Rugged smartwatch with precision dual-frequency GPS, 36-hour battery, and health tracking.",
+      "Specification": {
+        "Processor": "S8 Chip",
+        "Display": "49mm Always-On Retina OLED",
+        "Battery Life": "36 hours",
+        "Features": "ECG, Blood Oxygen, Dive Mode",
+        "Water Resistance": "100 meters"
+      },
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "P005",
+      "product_title": "Dell Inspiron 16 Plus",
+      "product_image": "https://i.ibb.co.com/hsQv2pR/images-1.jpg",
+      "category": "Laptop",
+      "price": 1199.99,
+      "description": "Powerful laptop with 16-inch 3K display and 12th Gen Intel Core processor.",
+      "Specification": {
+        "Processor": "Intel Core i7-12700H",
+        "Display": "16-inch 3K Anti-Glare",
+        "Storage": "1TB SSD",
+        "RAM": "16GB DDR5",
+        "Battery Life": "12 hours"
+      },
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P006",
+      "product_title": "Sony WF-1000XM5",
+      "product_image": "https://i.ibb.co.com/9wRnRHL/sony-wf-1000xm5-3hrs.png",
+      "category": "Accessory",
+      "price": 299.99,
+      "description": "Premium noise-canceling earbuds with superior audio and all-day comfort.",
+      "Specification": {
+        "Connectivity": "Bluetooth 5.3",
+        "Battery Life": "8 hours (24 hours with case)",
+        "Noise Cancellation": "Adaptive ANC",
+        "Weight": "5.9g per earbud",
+        "Microphone": "3-mic array"
+      },
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "P007",
+      "product_title": "Google Pixel 8 Pro",
+      "product_image": "https://i.ibb.co.com/M8myZrz/images-2.jpg",
+      "category": "Phone",
+      "price": 999.99,
+      "description": "The ultimate Google phone with Tensor G3 processor and AI-enhanced features.",
+      "Specification": {
+        "Processor": "Google Tensor G3",
+        "Display": "6.7-inch LTPO OLED",
+        "Storage": "256GB",
+        "Camera": "50MP Wide + 12MP Ultra Wide + 48MP Telephoto",
+        "Battery": "5000mAh"
+      },
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "P008",
+      "product_title": "Apple AirPods Pro 2",
+      "product_image": "https://i.ibb.co.com/8BZ9sww/gsmarena-001.jpg",
+      "category": "Accessory",
+      "price": 249.99,
+      "description": "Next-generation AirPods with improved sound, noise cancellation, and MagSafe charging.",
+      "Specification": {
+        "Connectivity": "Bluetooth 5.3",
+        "Battery Life": "6 hours per charge (30 hours with case)",
+        "Noise Cancellation": "Active Noise Cancellation",
+        "Weight": "5.3g per earbud",
+        "Features": "Spatial Audio, Adaptive Transparency"
+      },
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "P009",
+      "product_title": "Garmin Fenix 7X Solar",
+      "product_image": "https://i.ibb.co.com/6DVV7Bz/images-3.jpg",
+      "category": "Smartwatch",
+      "price": 999.99,
+      "description": "Premium multisport GPS smartwatch with solar charging and advanced performance metrics.",
+      "Specification": {
+        "Processor": "Custom Garmin Processor",
+        "Display": "1.4-inch Power Glass Solar",
+        "Battery Life": "37 days in smartwatch mode",
+        "Features": "GPS, Heart Rate, Pulse Ox, Training Readiness",
+        "Water Resistance": "100 meters"
+      },
+      "availability": true,
+      "rating": 4.8
+    }
+  ]
+  

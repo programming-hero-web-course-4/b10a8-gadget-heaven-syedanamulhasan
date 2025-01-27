@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom';
 import { FaCartArrowDown, FaRegHeart } from "react-icons/fa";
 const Banner = () => {
     const links = <>
-    <li><NavLink>Home</NavLink></li>
-    <li><NavLink>Statistics</NavLink></li>
-    <li><NavLink>Dashboard</NavLink></li>
+    <li><NavLink to="/">Home</NavLink></li>
+    <li><NavLink to="statistics">Statistics</NavLink></li>
+    <li><NavLink to="dashboard">Dashboard</NavLink></li>
     </>
     return (
         <div
