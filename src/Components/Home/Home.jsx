@@ -5,7 +5,9 @@ import Gadgets from '../Gadgets/Gadgets';
 const Home = () => {
     return (
         <div>
+            <div className='relative'>
             <Banner></Banner>
+            </div>
             <Gadgets></Gadgets>
         </div>
     );
