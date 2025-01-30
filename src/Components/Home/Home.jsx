@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div>
             <div className='relative'>
-            <Banner></Banner>
+            {/* <Banner></Banner> */}
             </div>
             <Gadgets></Gadgets>
         </div>

@@ -1,12 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import * as React from "react";
-import * as ReactDOM from "react-dom/client";
+
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
+
 import Root from './Components/Root/Root';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import Home from './Components/Home/Home';
@@ -41,7 +42,9 @@ const router = createBrowserRouter([
   },
 ])
 createRoot(document.getElementById('root')).render(
+  
   <StrictMode>
     <RouterProvider router={router}></RouterProvider>
-  </StrictMode>,
+  </StrictMode>
+  ,
 )

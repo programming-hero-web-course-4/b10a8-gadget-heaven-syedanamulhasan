@@ -12,14 +12,14 @@ const Gadgets = () => {
     return (
         <div className='w-4/5 mx-auto'>
             <h1 className='text-3xl font-bold text-center'>Explore Cutting-Edge Gadgets</h1>
-            <div className='flex gap-10'>
-                <div className='flex flex-col px-8 border-2 border-gray-400 gap-6 py-5 bg-white'>
-                <button className="btn btn-outline btn-accent">All Product</button>
-                <button className="btn btn-outline btn-accent">Laptop</button>
-                <button className="btn btn-outline btn-accent">Phones</button>
-                <button className="btn btn-outline btn-accent">Accessories</button>
+            <div className='lg:flex gap-10'>
+                <div className='flex flex-col rounded-lg  border-gray-400 px-10 lg:space-y-15 space-y-2 py-8  bg-[#F6F6F6]'>
+                <button className="btn btn-outline rounded-4xl  bg-white">All Product</button>
+                <button className="btn btn-outline rounded-4xl bg-white">Laptop</button>
+                <button className="btn btn-outline rounded-4xl bg-white">Phones</button>
+                <button className="btn btn-outline rounded-4xl bg-white">Accessories</button>
                 </div>
-                <div className='flex-1 grid grid-cols-3'>
+                <div className='grid lg:grid-cols-3 grid-cols-1 gap-10 justify-evenly'>
             {
                 gadgets.map(gadget=> <Gadget 
                 key={gadget.product_id} 

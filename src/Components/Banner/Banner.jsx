@@ -48,6 +48,7 @@ const Banner = () => {
   <span className='p-3 text-2xl border-2 rounded-full bg-white text-black ml-2'><FaRegHeart /></span>
   </div>
 </div>
+
   {/* <div className="hero-content text-neutral-content text-center">
     <div className="max-w-md">
       <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
