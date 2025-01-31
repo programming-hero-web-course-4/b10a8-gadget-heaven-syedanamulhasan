@@ -145,7 +145,7 @@
       "Specification": {
         "Processor": "Custom Garmin Processor",
         "Display": "1.4-inch Power Glass Solar",
-        "Battery Life": "37 days in smartwatch mode",
+        "Battery_Life": "37 days in smartwatch mode",
         "Features": "GPS, Heart Rate, Pulse Ox, Training Readiness",
         "Water Resistance": "100 meters"
       },

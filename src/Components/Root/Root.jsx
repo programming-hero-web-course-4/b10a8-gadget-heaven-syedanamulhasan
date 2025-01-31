@@ -7,6 +7,7 @@ const Root = () => {
     return (
         <div className='body'>
             <Navbar></Navbar>
+            
             <Outlet></Outlet>
             <Footer></Footer>
         </div>

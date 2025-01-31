@@ -36,13 +36,14 @@ const router = createBrowserRouter([
       },
       {
         path: "dashboard",
-        element: <Dashboard></Dashboard>
+        element: <Dashboard></Dashboard>,
+        loader: () => fetch('gadgets.json')
       }
     ]
   },
 ])
 createRoot(document.getElementById('root')).render(
-  
+
   <StrictMode>
     <RouterProvider router={router}></RouterProvider>
   </StrictMode>
