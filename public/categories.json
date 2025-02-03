@@ -1,0 +1,22 @@
+[
+    {
+      "product_id": 1,
+      "category_name": "All_Gadgets"
+    },
+    {
+        "product_id": 2,
+        "category_name": "Laptop"
+      },
+    {
+      "product_id": 3,
+      "category_name": "Phone"
+    },
+    {
+      "product_id": 4,
+      "category_name": "Accessory"
+    },
+    {
+      "product_id": 5,
+      "category_name": "Smartwatch"
+    }
+]

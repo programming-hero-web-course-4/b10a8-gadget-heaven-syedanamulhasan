@@ -29,7 +29,7 @@ const Dashboard = () => {
             </p>
 
             <button class="btn btn-outline btn-primary font-bold text-white">cart</button>
-            <button class="btn btn-outline btn-primary ml-4">Wishlist</button>
+            <button class="btn btn-outline btn-primary ml-4 text-white">Wishlist</button>
 
           </div>
         </div>

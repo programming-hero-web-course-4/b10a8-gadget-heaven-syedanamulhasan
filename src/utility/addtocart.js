@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 
 
 const getCartList = () => {
@@ -14,11 +15,13 @@ const addToCartList = (id) => {
     const cartList = getCartList();
     if (cartList.includes(id)) {
         console.log(id, 'already exist')
+        toast.error("Already added")
     }
     else {
         cartList.push(id);
         const cartListStr = JSON.stringify(cartList);
         localStorage.setItem("cart-list", cartListStr);
+        toast("Device Added Successfully")
     }
 }
 export { addToCartList, getCartList }

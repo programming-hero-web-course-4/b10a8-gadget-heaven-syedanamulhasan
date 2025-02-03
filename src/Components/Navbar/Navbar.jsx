@@ -5,8 +5,8 @@ import { FiShoppingCart } from "react-icons/fi";
 const Navbar = () => {
     const links = <>
     <li><NavLink to="/">Home</NavLink></li>
-    <li><NavLink to= "statistics">Statistics</NavLink></li>
-    <li><NavLink to="dashboard">Dashboard</NavLink></li>
+    <li><NavLink to= "/statistics">Statistics</NavLink></li>
+    <li><NavLink to="/dashboard">Dashboard</NavLink></li>
     </>
     return (
       <div
