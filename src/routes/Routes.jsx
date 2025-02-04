@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../Pages/Home";
 import Stats from "../Pages/Stats";
 import Dashboard from "../Pages/Dashboard";
+import Gadgets from "../Compos/Gadgets";
 
 
 const routes = createBrowserRouter([
@@ -12,7 +13,20 @@ const routes = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('../categories.json'),
+                children: [
+                    {
+                        path: '/',
+                        element: <Gadgets></Gadgets>,
+                        loader: () => fetch('../gadgets.json')
+                    },
+                    {
+                        path: '/category/:category',
+                        element: <Gadgets></Gadgets>,
+                        loader: () => fetch('../gadgets.json')
+                    }
+                ]
             },
             {
                 path: '/statistics',

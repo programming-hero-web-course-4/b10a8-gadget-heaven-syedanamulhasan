@@ -1,17 +1,20 @@
 import React from 'react';
 import Banner from '../Compos/Banner';
 import Heading from '../Compos/Heading';
-import { useLoaderData } from 'react-router-dom';
+import { Outlet, useLoaderData } from 'react-router-dom';
 import Categories from '../Compos/Categories';
 
 const Home = () => {
+    const categories = useLoaderData();
+    // console.log(categories)
     return (
         <div className='container mx-auto'>
-            
+
             <Banner></Banner>
             <Heading></Heading>
             <div className='flex'>
-        <Categories></Categories>
+                <Categories categories={categories}></Categories>
+                <Outlet></Outlet>
             </div>
             
         </div>
