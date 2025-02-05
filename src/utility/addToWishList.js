@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const getWishList = () => {
     const wishListStr = localStorage.getItem('wish-list');
     if (wishListStr) {
@@ -15,6 +17,7 @@ const addToWishList = (id) => {
         wishList.push(id);
         const wishListStr = JSON.stringify(wishList);
         localStorage.setItem('wish-list', wishListStr)
+        toast.success("Device Added to the Wishlist Successfully")
     }
 
 }

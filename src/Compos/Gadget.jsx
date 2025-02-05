@@ -8,7 +8,8 @@ const Gadget = ({ gadget }) => {
                 <img className='h-[350px]  border-gray-400 rounded-lg' src={product_image} alt="" />
                 <h1 className='text-xl font-bold'>{product_title}</h1>
                 <p>{price} $</p>
-                <Link to={`gadgets/${product_id}`}><button className='btn btn-lg btn-outline btn-primary rounded-4xl'>View Details</button></Link>
+                <Link to={`gadgets/${product_id}`}
+                className='btn btn-lg btn-outline btn-primary rounded-4xl'>View Details</Link>
             </div>
         </div>
     );

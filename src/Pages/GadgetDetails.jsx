@@ -1,23 +1,37 @@
-import React from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useParams } from "react-router-dom";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
 import { FaCartArrowDown, FaRegHeart } from "react-icons/fa";
-import { addToCartList } from '../../utility/addToCart';
-import { addToWishList } from '../../utility/addToWishList';
+import { useEffect, useState } from "react";
+import { addToCartList } from "../utility/addToCart";
+import { addToWishList, getWishList } from "../utility/addToWishList";
 const GadgetDetails = () => {
-    const { gadgetId } = useParams();
-    const data = useLoaderData();
-    const id = parseInt(gadgetId);
+    const gadgetData = useLoaderData();
 
-    const gadget = data.find(gadget => gadget.product_id === id);
+    const { id } = useParams();
 
-    const { product_title, product_image, price, description, Specification, rating, availability, product_id } = gadget;
+    const [gadgetDetail, setGadgetDetail] = useState([]);
+
+    const [isFavorite, setIsFavorite] = useState(false);
+
+    useEffect(() => {
+        const singleGadgetDetail = gadgetData.find(gadgetDetail => gadgetDetail.product_id == id)
+        setGadgetDetail(singleGadgetDetail)
+
+        const wishList = getWishList();
+        const isExist = wishList.find(item=>item.product_id == gadgetDetail.product_id)
+        if(isExist){
+            // setIsFavorite(true);
+        }
+    }, [gadgetData, id])
+
+    const { product_title, product_image, price, description, Specification, rating, availability, product_id } = gadgetDetail;
 
     const handleAddToCart = (id) => {
-        addToCartList(id)
+        addToCartList(id);
     }
-    const handleWishList = (id) =>{
-        addToWishList(id)
+    const handleWishList = (id) => {
+        addToWishList(id);
+        setIsFavorite(true);
     }
     return (
         <div>
@@ -36,9 +50,9 @@ const GadgetDetails = () => {
                         }
                         <p>{description}</p>
                         <ol><span className='font-bold text-xl'>Specifications:</span>
-                            {Object.values(Specification).map((value, index) => (
+                            {/* {Object.values(Specification).map((value, index) => (
                                 <li className='list-decimal' key={index}>{value}</li> // Render each value inside a <p> tag
-                            ))}
+                            ))} */}
                         </ol>
                         <div className='flex items-center gap-2'>
                             <p>Rating </p><span className='text-orange-400'><FaRegStarHalfStroke /></span>
@@ -59,8 +73,9 @@ const GadgetDetails = () => {
                         <br />
                         <div className='flex items-center gap-5'>
                             <button onClick={() => handleAddToCart(product_id)} className="btn btn-lg rounded-3xl bg-[#9538E2] text-white">Add to cart <span className='text-xl ml-2'><FaCartArrowDown /></span></button>
-                            <button onClick={() => handleWishList(product_id)}
-                                className='text-2xl p-2 border-2 rounded-4xl'><FaRegHeart /></button>
+                            <button disabled={isFavorite}
+                                onClick={() => handleWishList(product_id)}
+                                className='btn btn-circle btn-active text-2xl p-2 border-2 '><FaRegHeart /></button>
                         </div>
                     </div>
                 </div>

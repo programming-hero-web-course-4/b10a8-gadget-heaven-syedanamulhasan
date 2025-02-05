@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { TbArrowsSort } from "react-icons/tb";
 import { useLoaderData } from 'react-router-dom';
-import { getCartList } from '../../utility/addtocart';
+import { getCartList } from '../../utility/addToCart';
 import Gadget from '../Gadget/Gadget';
 import CartItem from '../CartItem/CartItem';
 const Dashboard = () => {

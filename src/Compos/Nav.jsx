@@ -1,17 +1,32 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { FaRegHeart } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 
 const Nav = () => {
+
+    // const handleNav = () =>{
+    //     navigate= useNavigate();
+    //     navigate('/statistics')
+    //     navItem = document.getElementById('nav-item');
+    //     console.log(navItem)
+    //     navItem.className.remove('mx-auto ');
+
+    // }
     const links = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/statistics">Statistics</NavLink></li>
-        <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+        <li><NavLink
+            className={({ isActive })=>`${isActive ? 'btn btn-active btn-ghost': ''}`}
+            to="/">Home</NavLink></li>
+        <li><NavLink 
+        className={({ isActive })=>`${isActive ? 'btn btn-active btn-ghost': ''}`}
+        to="/statistics">Statistics</NavLink></li>
+        <li><NavLink 
+        className={({ isActive })=>`${isActive ? 'btn btn-active btn-ghost': ''}`}
+        to="/dashboard">Dashboard</NavLink></li>
     </>
     return (
         <div
             className="container mx-auto rounded-t-lg bg-[#9538E2] ">
-            <div className="navbar text-gray-900 px-8 mt-10 relative"
+            <div className="navbar text-gray-900 px-8 mt-10 relative text-white"
             >
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -42,11 +57,11 @@ const Nav = () => {
                         {links}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end text-black">
 
                     <span className='text-2xl mr-2 p-2 border-2 rounded-4xl bg-white'><FiShoppingCart />
                     </span>
-                    <span className='text-2xl p-2 border-2 rounded-4xl bg-white'><FaRegHeart /></span>
+                    <span className='text-2xl p-2 border-2 rounded-4xl bg-white '><FaRegHeart /></span>
                 </div>
             </div>
 
