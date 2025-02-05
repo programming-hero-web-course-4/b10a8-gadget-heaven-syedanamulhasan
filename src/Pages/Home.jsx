@@ -12,7 +12,7 @@ const Home = () => {
 
             <Banner></Banner>
             <Heading></Heading>
-            <div className='flex'>
+            <div className='flex gap-10'>
                 <Categories categories={categories}></Categories>
                 <Outlet></Outlet>
             </div>

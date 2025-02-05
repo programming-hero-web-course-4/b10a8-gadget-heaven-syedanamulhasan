@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Categories = ({ categories }) => {
     // console.log(categories)
@@ -10,15 +10,17 @@ const Categories = ({ categories }) => {
     //         .then(data => setCategories(data))
     // }, [])
     return (
-        <div className="flex flex-col space-y-10 rounded-lg  border-gray-400 px-10 lg:space-y-15 space-y-2 py-8  bg-[#F6F6F6] h-fit shadow-lg">
+        <div className="flex flex-col rounded-lg  border-gray-400 px-10 lg:space-y-15 space-y-2 py-8  bg-[#F6F6F6] h-fit shadow-lg">
             {
                 categories.map(category => (
                     category.category_name === 'All Gadgets' ? <NavLink 
                     key={category.category_name} 
-                    to='/'><button className='btn btn-lg rounded-lg btn-primary btn-outline w-full'>{category.category_name}</button></NavLink>
+                    to='/'
+                    className={({isActive})=>`${isActive? 'btn btn-primary btn-lg rounded-lg':'btn btn-lg rounded-lg btn-primary btn-outline w-full'}`}>{category.category_name}</NavLink>
                     :<NavLink 
                     key={category.category_name} 
-                    to={`/category/${category.category_name}`}><button className='btn btn-lg rounded-lg btn-primary btn-outline w-full'>{category.category_name}</button></NavLink>
+                    to={`/category/${category.category_name}`}
+                    className={({isActive})=>`${isActive? 'btn btn-primary btn-lg rounded-lg':'btn btn-lg rounded-lg btn-primary btn-outline w-full'}`}>{category.category_name}</NavLink>
                 ))
             }
         </div>

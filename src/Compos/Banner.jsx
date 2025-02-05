@@ -4,7 +4,7 @@ import banner from '../assets/banner.jpg'
 const Banner = () => {
     return (
         <div
-            className="hero container mx-auto rounded-3xl lg:h-[1000px] h-[600px]"
+            className="hero container mx-auto rounded-b-lg lg:h-[1000px] h-[600px]"
             style={{
                 background: "#9538E2"
             }}>

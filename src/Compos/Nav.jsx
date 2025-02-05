@@ -10,8 +10,8 @@ const Nav = () => {
     </>
     return (
         <div
-            className="container mx-auto rounded-3xl ">
-            <div className="navbar text-gray-900 px-8 pt-10 relative"
+            className="container mx-auto rounded-t-lg bg-[#9538E2] ">
+            <div className="navbar text-gray-900 px-8 mt-10 relative"
             >
                 <div className="navbar-start">
                     <div className="dropdown">
