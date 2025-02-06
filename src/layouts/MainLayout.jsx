@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from '../Compos/Nav';
 import Footer from '../Compos/Footer';
 import { Outlet } from 'react-router-dom';
+import './mainlayout.css'
 
 const MainLayout = () => {
     return (
