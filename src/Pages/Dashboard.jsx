@@ -16,11 +16,18 @@ const Dashboard = () => {
     const [wish, setWish] = useState([]);
     const allGadgets = useLoaderData();
 
-    useEffect(()=>{
+    useEffect(() => {
         const wishList = getWishList();
         const wishItem = allGadgets.filter(gadget => wishList.includes(gadget.product_id))
         setWish(wishItem)
-    },[])
+    }, [])
+
+    const handleSort = (sortBy) => {
+        if (sortBy == 'price') {
+            const sorted = [...allGadgets].sort((a,b)=>b.price - a.price)
+            setCart(sorted);
+        }
+    }
 
     useEffect(() => {
         const cartList = getCartList();
@@ -71,18 +78,18 @@ const Dashboard = () => {
 
                             <button
                                 onClick={() => handleToggle("cart")}
-                                className={`${toggle.gadget ? "btn btn-primary " : "btn"}`}>cart</button>
+                                className={`${toggle.gadget ? "btn btn-primary mr-4" : "btn mr-4"}`}>cart</button>
                             <button
                                 onClick={() => handleToggle("wishlist")} className={`${toggle.gadget ? "btn" : "btn btn-primary"}`}>Wishlist</button>
 
                         </div>
                     </div>
                 </div>
-                <div className='flex justify-between my-10'>{toggle.gadget?
-                    <p className='text-2xl'>Cart</p>:<p className='text-2xl'>Wishlist</p>}
+                <div className='flex justify-between my-10'>{toggle.gadget ?
+                    <p className='text-2xl'>Cart</p> : <p className='text-2xl'>Wishlist</p>}
                     <div className='flex items-center gap-6'>
                         <p>Total Cost: </p>
-                        <button className='btn btn-primary rounded-4xl'>Sort by Price <span className='text-xl'><TbArrowsSort /></span></button>
+                        <button onClick={() => handleSort("price")} className='btn btn-primary rounded-4xl'>Sort by Price <span className='text-xl'><TbArrowsSort /></span></button>
                     </div>
                 </div>
                 <div>
@@ -91,11 +98,11 @@ const Dashboard = () => {
                             cart.map(cart => <Cart
                                 key={cart.product_id}
                                 handleRemove={handleRemove}
-                                cart={cart}></Cart>) : wish.map(wish =><Wish
-                                key={wish.product_id}
-                                wish={wish}></Wish>)
+                                cart={cart}></Cart>) : wish.map(wish => <Wish
+                                    key={wish.product_id}
+                                    wish={wish}></Wish>)
                     }
-                    
+
                 </div>
             </div>
         </div >
