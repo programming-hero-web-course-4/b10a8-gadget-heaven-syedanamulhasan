@@ -8,6 +8,7 @@ const Banner = () => {
         navigate("/dashboard");
     }
     return (
+        <div className='h-fit'>
         <div
             className="hero container mx-auto rounded-b-lg lg:h-[1000px] h-[600px]"
             style={{
@@ -21,13 +22,14 @@ const Banner = () => {
                     Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
                 </p>
                 <button onClick={()=>dashboardNavigation()} class="btn text-[#9538E2] rounded-3xl">Shop Now</button>
-                {/* <div className='w-4/5 mx-auto lg:mt-10'>
+                <div className='w-4/5 mx-auto lg:mt-10'>
             <img className='border-2 p-4 glass rounded-3xl' src={banner} alt="" />
-            
-            </div> */}
             
             </div>
             
+            </div>
+            
+        </div>
         </div>
     );
 };

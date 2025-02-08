@@ -149,7 +149,7 @@
         "Features": "GPS, Heart Rate, Pulse Ox, Training Readiness",
         "Water Resistance": "100 meters"
       },
-      "availability": true,
+      "availability": false,
       "rating": 4.8
     }
   ]

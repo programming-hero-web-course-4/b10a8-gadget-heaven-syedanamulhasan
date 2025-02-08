@@ -5,12 +5,14 @@ import Stats from "../Pages/Stats";
 import Dashboard from "../Pages/Dashboard";
 import Gadgets from "../Compos/Gadgets";
 import GadgetDetails from "../Pages/GadgetDetails";
+import ErrorPage from "../Pages/ErrorPage";
 
 
 const routes = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout></MainLayout>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',

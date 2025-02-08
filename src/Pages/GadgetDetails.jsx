@@ -34,65 +34,70 @@ const GadgetDetails = () => {
         setIsFavorite(true);
     }
     return (
-        <div>
+        <div className="h-[1400px]">
             <div className="bg-[#9538E2] mt-5 h-[600px] flex flex-col items-center">
-                <div className=" text-center text-white mt-10 ">
-                    <div className="max-w-md ">
-                        <h1 className="text-5xl font-bold">Product Details</h1>
-                        <p className="py-6">
-                        Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
-                        </p>
-                    </div>
-                </div>
-                <div className="hero rounded-2xl bg-gray-100 mt-5 shadow-2xl w-fit">
-                <div className="hero-content flex-col lg:flex-row gap-10 ">
-                    <div className="h-full">
-                    <img
-                        src={product_image}
-                        className="max-w-sm rounded-lg shadow-2xl h-full" />
-                    </div>
-                    <div className="space-y-3">
-                        <h1 className="text-3xl font-bold">{product_title}</h1>
-                        <p className="py-2 font-bold">
-                            Price: $ {price}
-                        </p>
-                        {
-                            availability ? <button className="btn btn-outline btn-error">In stock</button> : <button className="btn btn-primary">Not available</button>
-                        }
-                        <p>{description}</p>
-                        <ol><span className='font-bold text-xl'>Specifications:</span>
-                            {/* {Object.values(Specification).map((value, index) => (
-                                <li className='list-decimal' key={index}>{value}</li> // Render each value inside a <p> tag
-                            ))} */}
-                        </ol>
-                        <div className='flex items-center gap-2'>
-                            <p>Rating </p><span className='text-orange-400'><FaRegStarHalfStroke /></span>
+                
+                    <div className=" text-center text-white mt-10 ">
+                        <div className="max-w-md ">
+                            <h1 className="lg:text-5xl font-bold">Product Details</h1>
+                            <p className="lg:py-6">
+                                Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
+                            </p>
                         </div>
-                        <div className="rating">
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                            <input
-                                type="radio"
-                                name="rating-2"
-                                className="mask mask-star-2 bg-orange-400"
-                                defaultChecked />
+                    </div>
+                    <div className="hero rounded-2xl bg-gray-100 mt-5 shadow-2xl w-fit">
+                        <div className="hero-content flex-col lg:flex-row gap-10 ">
+                            <div className="h-full">
+                                <img
+                                    src={product_image}
+                                    className="max-w-sm rounded-lg shadow-2xl h-full" />
+                            </div>
+                            <div className="space-y-3">
+                                <h1 className="text-3xl font-bold">{product_title}</h1>
+                                <p className="py-2 font-bold">
+                                    Price: $ {price}
+                                </p>
+                                {
+                                    availability ? <button className="btn btn-outline btn-success">In stock</button> : <button className="btn btn-outline btn-error">Not available</button>
+                                }
+                                <p className="text-xl">{description}</p>
+                                <ol className='text-xl ml-12'>
+                                    {Specification &&
+                                        Object.keys(Specification).map((s, i) => (
+                                            <li className='list-decimal' key={i}>
+                                                {s}: {Specification[s]}
+                                            </li>
+                                        ))}
+                                </ol>
+                                <div className='flex items-center gap-2'>
+                                    <p>Rating </p><span className='text-orange-400'><FaRegStarHalfStroke /></span>
+                                </div>
+                                <div className="rating">
+                                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                    <input
+                                        type="radio"
+                                        name="rating-2"
+                                        className="mask mask-star-2 bg-orange-400"
+                                        defaultChecked />
 
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" defaultChecked />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" defaultChecked />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                        </div>
-                        <span>{rating}</span>
-                        <br />
-                        <div className='flex items-center gap-5'>
-                            <button onClick={() => handleAddToCart(product_id)} className="btn btn-lg rounded-3xl bg-[#9538E2] text-white">Add to cart <span className='text-xl ml-2'><FaCartArrowDown /></span></button>
-                            <button disabled={isFavorite}
-                                onClick={() => handleWishList(product_id)}
-                                className='btn btn-circle btn-active text-2xl p-2 border-2 '><FaRegHeart /></button>
+                                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" defaultChecked />
+                                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" defaultChecked />
+                                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <button className="btn btn-circle btn-active ml-4">{rating}</button>
+                                <br />
+                                <div className='flex items-center gap-5'>
+                                    <button onClick={() => handleAddToCart(product_id)} className="btn btn-lg rounded-3xl bg-[#9538E2] text-white">Add to cart <span className='text-xl ml-2'><FaCartArrowDown /></span></button>
+                                    <button disabled={isFavorite}
+                                        onClick={() => handleWishList(product_id)}
+                                        className='btn btn-circle btn-active text-2xl p-2 border-2 '><FaRegHeart /></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                
             </div>
-            </div>
-            
+
         </div>
     );
 };

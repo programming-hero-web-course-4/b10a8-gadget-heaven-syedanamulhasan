@@ -9,14 +9,15 @@ const Home = () => {
     // console.log(categories)
     return (
         <div className='container mx-auto'>
-
-            <Banner></Banner>
+            <div className='lg:h-[1450px] h-[750px]'>
+                <Banner></Banner>
+            </div>
             <Heading></Heading>
-            <div className='flex gap-10'>
+            <div className='lg:flex gap-10'>
                 <Categories categories={categories}></Categories>
                 <Outlet></Outlet>
             </div>
-            
+
         </div>
     );
 };

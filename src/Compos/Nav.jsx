@@ -1,11 +1,11 @@
-import { Link, NavLink, useLocation} from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate} from 'react-router-dom';
 import { FaRegHeart } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 
 const Nav = () => {
     const { pathname } = useLocation();
 
-    
+
     const links = <>
         <li><NavLink
             className={({ isActive }) => `${isActive ? 'btn btn-active btn-ghost' : ''}`}

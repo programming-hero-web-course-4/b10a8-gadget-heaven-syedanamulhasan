@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { TbArrowsSort } from "react-icons/tb";
 
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useLocation } from 'react-router-dom';
 
 
 
@@ -12,8 +12,11 @@ import Wish from "../Compos/Wish";
 import { getWishList } from "../utility/addToWishList";
 
 const Dashboard = () => {
+    const{pathname} = useLocation();
+
     const [cart, setCart] = useState([]);
     const [wish, setWish] = useState([]);
+
     const allGadgets = useLoaderData();
 
     useEffect(() => {
@@ -21,6 +24,7 @@ const Dashboard = () => {
         const wishItem = allGadgets.filter(gadget => wishList.includes(gadget.product_id))
         setWish(wishItem)
     }, [])
+
 
     const handleSort = (sortBy) => {
         if (sortBy == 'price') {
@@ -53,7 +57,8 @@ const Dashboard = () => {
 
     const handleToggle = (status) => {
         if (status == "cart") {
-            setToggle({
+            setToggle(
+                {
                 gadget: true,
                 status: "cart"
             })
@@ -86,11 +91,11 @@ const Dashboard = () => {
                     </div>
                 </div>
                 <div className='flex justify-between my-10'>{toggle.gadget ?
-                    <p className='text-2xl'>Cart</p> : <p className='text-2xl'>Wishlist</p>}
+                    <p className='text-2xl font-bold'>Cart</p> : <p className='text-2xl font-bold'>Wishlist</p>}
                     {
                         toggle.gadget ?
                             <div className='flex items-center gap-6'>
-                                <p>Total Cost: </p>
+                                <p className="text-xl">Total Cost: <span>0.00</span></p>
                                 <button onClick={() => handleSort("price")} className='btn btn-primary rounded-4xl'>Sort by Price <span className='text-xl'><TbArrowsSort /></span></button>
 
                             </div> : ""
