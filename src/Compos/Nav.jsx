@@ -5,14 +5,7 @@ import { FiShoppingCart } from "react-icons/fi";
 const Nav = () => {
     const { pathname } = useLocation();
 
-    // const handleNav = () =>{
-    //     navigate= useNavigate();
-    //     navigate('/statistics')
-    //     navItem = document.getElementById('nav-item');
-    //     console.log(navItem)
-    //     navItem.className.remove('mx-auto ');
-
-    // }
+    
     const links = <>
         <li><NavLink
             className={({ isActive }) => `${isActive ? 'btn btn-active btn-ghost' : ''}`}

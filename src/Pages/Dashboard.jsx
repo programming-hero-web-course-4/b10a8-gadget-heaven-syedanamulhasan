@@ -24,7 +24,7 @@ const Dashboard = () => {
 
     const handleSort = (sortBy) => {
         if (sortBy == 'price') {
-            const sorted = [...allGadgets].sort((a,b)=>b.price - a.price)
+            const sorted = [...allGadgets].sort((a, b) => b.price - a.price)
             setCart(sorted);
         }
     }
@@ -87,10 +87,14 @@ const Dashboard = () => {
                 </div>
                 <div className='flex justify-between my-10'>{toggle.gadget ?
                     <p className='text-2xl'>Cart</p> : <p className='text-2xl'>Wishlist</p>}
-                    <div className='flex items-center gap-6'>
-                        <p>Total Cost: </p>
-                        <button onClick={() => handleSort("price")} className='btn btn-primary rounded-4xl'>Sort by Price <span className='text-xl'><TbArrowsSort /></span></button>
-                    </div>
+                    {
+                        toggle.gadget ?
+                            <div className='flex items-center gap-6'>
+                                <p>Total Cost: </p>
+                                <button onClick={() => handleSort("price")} className='btn btn-primary rounded-4xl'>Sort by Price <span className='text-xl'><TbArrowsSort /></span></button>
+
+                            </div> : ""
+                    }
                 </div>
                 <div>
                     {
