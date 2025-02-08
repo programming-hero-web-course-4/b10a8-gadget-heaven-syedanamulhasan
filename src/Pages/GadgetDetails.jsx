@@ -18,8 +18,8 @@ const GadgetDetails = () => {
         setGadgetDetail(singleGadgetDetail)
 
         const wishList = getWishList();
-        const isExist = wishList.find(item=>item.product_id == gadgetDetail.product_id)
-        if(isExist){
+        const isExist = wishList.find(item => item.product_id == gadgetDetail.product_id)
+        if (isExist) {
             // setIsFavorite(true);
         }
     }, [gadgetData, id])
@@ -35,12 +35,23 @@ const GadgetDetails = () => {
     }
     return (
         <div>
-            <div className="hero  min-h-screen">
-                <div className="hero-content flex-col lg:flex-row gap-10">
+            <div className="bg-[#9538E2] mt-5 h-[600px] flex flex-col items-center">
+                <div className=" text-center text-white mt-10 ">
+                    <div className="max-w-md ">
+                        <h1 className="text-5xl font-bold">Product Details</h1>
+                        <p className="py-6">
+                        Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
+                        </p>
+                    </div>
+                </div>
+                <div className="hero rounded-2xl bg-gray-100 mt-5 shadow-2xl w-fit">
+                <div className="hero-content flex-col lg:flex-row gap-10 ">
+                    <div className="h-full">
                     <img
                         src={product_image}
-                        className="max-w-sm rounded-lg shadow-2xl" />
-                    <div>
+                        className="max-w-sm rounded-lg shadow-2xl h-full" />
+                    </div>
+                    <div className="space-y-3">
                         <h1 className="text-3xl font-bold">{product_title}</h1>
                         <p className="py-2 font-bold">
                             Price: $ {price}
@@ -80,6 +91,8 @@ const GadgetDetails = () => {
                     </div>
                 </div>
             </div>
+            </div>
+            
         </div>
     );
 };
