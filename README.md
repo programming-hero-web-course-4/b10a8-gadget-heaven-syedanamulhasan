@@ -1,8 +1,19 @@
-# React + Vite
+ live link: https://gadget-heaven-sah75.netlify.app/
+ requirement document: https://github.com/ProgrammingHero1/B10-A8-gadget-heaven
+ React Fundamental concept used:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-link : http://localhost:5173/
-Currently, two official plugins are available:
+ 1.useState.
+ 2.useEffect.
+ 3.Props.
+ 4.Conditional Rendering.
+ 5.React Router.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ I have used local storage to handle my data.
+Features:
+1.Single Page Application.
+2.Navigate on several routes without any buffering.
+3.Avoid Reloading make my webpage faster.
+4.My pages loads new content without reloading.
+5.Smooth user experience.
+6.Show warning when user try to add duplicate data.
+7.Items had been categorized for users advantage.

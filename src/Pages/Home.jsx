@@ -6,7 +6,7 @@ import Categories from '../Compos/Categories';
 
 const Home = () => {
     const categories = useLoaderData();
-    // console.log(categories)
+    
     return (
         <div className='container mx-auto'>
             <div className='lg:h-[1450px] h-[750px]'>
