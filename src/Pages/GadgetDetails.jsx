@@ -37,18 +37,18 @@ const GadgetDetails = () => {
         setIsFavorite(true);
     }
     return (
-        <div className="h-[1600px]">
+        <div className="h-[1500px]">
             <div className="bg-[#9538E2] mt-5 h-[600px] flex flex-col items-center">
 
                 <div className=" text-center text-white mt-10 ">
                     <div className="max-w-md ">
-                        <h1 className="lg:text-5xl font-bold">Product Details</h1>
+                        <h1 className="lg:text-5xl text-2xl font-bold">Product Details</h1>
                         <p className="lg:py-6">
                             Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
                         </p>
                     </div>
                 </div>
-                <div className="hero rounded-2xl bg-gray-100 mt-5 shadow-2xl w-fit p-10">
+                <div className="hero rounded-2xl bg-gray-100 mt-5 shadow-2xl w-fit lg:p-10">
                     <div className="hero-content flex-col lg:flex-row gap-10 ">
                         <div className="h-full">
                             <img
@@ -56,15 +56,15 @@ const GadgetDetails = () => {
                                 className="max-w-sm rounded-lg shadow-2xl h-full" />
                         </div>
                         <div className="space-y-3">
-                            <h1 className="text-3xl font-bold">{product_title}</h1>
+                            <h1 className="lg:text-3xl text-xl font-bold">{product_title}</h1>
                             <p className="py-2 font-bold">
                                 Price: $ {price}
                             </p>
                             {
-                                availability ? <button className="btn btn-outline btn-success">In stock</button> : <button className="btn btn-outline btn-error">Not available</button>
+                                availability ? <button className="btn btn-outline btn-success rounded-4xl btn-xs">In stock</button> : <button className="btn btn-outline btn-error btn-xs rounded-4xl">Not available</button>
                             }
-                            <p className="text-xl">{description}</p>
-                            <ol className='text-xl ml-12'>
+                            <p className="lg:text-xl">{description}</p>
+                            <ol className='lg:text-xl ml-12'>
                                 {Specification &&
                                     Object.keys(Specification).map((s, i) => (
                                         <li className='list-decimal' key={i}>

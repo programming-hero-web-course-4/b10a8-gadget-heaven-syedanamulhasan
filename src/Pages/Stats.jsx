@@ -1,12 +1,17 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+// import { Helmet } from 'react-helmet';
+
 
 const Stats = () => {
-    // const { pathname } = useLocation();
     return (
-        <div className='container mx-auto my-10'>
+        <div>
+            {/* <Helmet>
+                <title>Statistics</title>
+            </Helmet> */}
+            <div className='container mx-auto my-10'>
            <h1 className='text-3xl text-center font-bold'>Statistics</h1>
 
+        </div>
         </div>
     );
 };

@@ -5,7 +5,6 @@ import { FiShoppingCart } from "react-icons/fi";
 const Nav = () => {
     const { pathname } = useLocation();
 
-
     const links = <>
         <li><NavLink
             className={({ isActive }) => `${isActive ? 'btn btn-active btn-ghost' : ''}`}
@@ -16,6 +15,9 @@ const Nav = () => {
         <li><NavLink
             className={({ isActive }) => `${isActive ? 'btn btn-active btn-ghost' : ''}`}
             to="/dashboard">Dashboard</NavLink></li>
+        <li><NavLink
+            className={({ isActive }) => `${isActive ? 'btn btn-active btn-ghost' : ''}`}
+            to="/faq">FAQ</NavLink></li>
     </>
     return (
         <div>
@@ -42,7 +44,7 @@ const Nav = () => {
                             </div>
                             <ul
                                 tabIndex={0}
-                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                className="menu menu-sm dropdown-content text-[#9538E2] bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                                 {links}
                             </ul>
                         </div>
@@ -55,9 +57,9 @@ const Nav = () => {
                     </div>
                     <div className="navbar-end text-black">
 
-                        <span className='text-2xl mr-2 p-2 border-2 rounded-4xl bg-white'><FiShoppingCart />
+                        <span className='text-2xl mr-2 p-2 rounded-4xl bg-white'><FiShoppingCart />
                         </span>
-                        <span className='text-2xl p-2 border-2 rounded-4xl bg-white '><FaRegHeart /></span>
+                        <span className='text-2xl p-2 rounded-4xl bg-white '><FaRegHeart /></span>
                     </div>
                 </div>
 
@@ -85,22 +87,22 @@ const Nav = () => {
                             </div>
                             <ul
                                 tabIndex={0}
-                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                className="menu menu-sm dropdown-content text-[#9538E2] bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                                 {links}
                             </ul>
                         </div>
-                        <Link to='/'><a className="text-xl">Gadget Heaven</a></Link>
+                        <Link to='/' className="text-xl font-semibold text-[#9538E2]">Gadget Heaven</Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1">
+                        <ul className="menu menu-horizontal px-1 text-[#9538E2]">
                             {links}
                         </ul>
                     </div>
                     <div className="navbar-end text-black">
 
-                        <span className='text-2xl mr-2 p-2 border-2 rounded-4xl bg-white'><FiShoppingCart />
+                        <span className='text-2xl mr-2 p-2 border-1 rounded-4xl bg-white'><FiShoppingCart />
                         </span>
-                        <span className='text-2xl p-2 border-2 rounded-4xl bg-white '><FaRegHeart /></span>
+                        <span className='text-2xl p-2 border-1 rounded-4xl bg-white '><FaRegHeart /></span>
                     </div>
                 </div>
 

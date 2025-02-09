@@ -6,8 +6,8 @@ const Footer = () => {
             
             <footer className="bg-gray-100 text-black mt-10">
             <div className='p-8 border-b-2 border-gray-300 lg:w-3/5 mx-auto space-y-2'>
-            <h1 className='text-4xl text-center font-bold'>Gadget Heaven</h1>
-            <p className='lg:text-xl text-center'>Leading the way in cutting-edge technology and innovations</p>
+            <h1 className='lg:text-4xl text-2xl text-[#9538E2] text-center font-bold'>Gadget Heaven</h1>
+            <p className='lg:text-xl text-center text-[#9538E2]'>Leading the way in cutting-edge technology and innovations</p>
             </div>
                 <div className="footer lg:flex justify-around p-10 w-3/5 mx-auto text-gray-700">
                     <nav>
