@@ -1,27 +1,32 @@
 import { useEffect, useState } from "react";
 import { TbArrowsSort } from "react-icons/tb";
 
-import { useLoaderData, useLocation } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 
 
 
-import { getCartList, removeCart } from "../utility/addtocart";
+import { clearStorage, getCartList, removeCart } from "../utility/addtocart";
 import Cart from "../Compos/Cart";
-import Categories from "../Compos/Categories";
+
 import Wish from "../Compos/Wish";
 import { getWishList } from "../utility/addToWishList";
 
+
 const Dashboard = () => {
-    const{pathname} = useLocation();
+    let navigate = useNavigate();
 
     const [cart, setCart] = useState([]);
+    console.log(cart)
     const [wish, setWish] = useState([]);
-
+    const [price, setPrice] = useState(0.00);
+console.log(wish)
     const allGadgets = useLoaderData();
 
     useEffect(() => {
         const wishList = getWishList();
+        console.log(wishList)
         const wishItem = allGadgets.filter(gadget => wishList.includes(gadget.product_id))
+        console.log(wishItem)
         setWish(wishItem)
     }, [])
 
@@ -35,9 +40,12 @@ const Dashboard = () => {
 
     useEffect(() => {
         const cartList = getCartList();
-        console.log(cartList, allGadgets)
+        console.log(cartList)
         const cartItem = allGadgets.filter(gadget => cartList.includes(gadget.product_id))
-
+        
+        // console.log(cartItem);
+        const cartPrice = cartItem.reduce((acc, cart)=> acc + cart.price, 0)
+        setPrice(cartPrice);
         setCart(cartItem)
 
     }, [])
@@ -46,10 +54,13 @@ const Dashboard = () => {
         const cartList = getCartList();
         console.log(cartList, allGadgets)
         const cartItem = allGadgets.filter(gadget => cartList.includes(gadget.product_id))
-
+        
         setCart(cartItem)
     }
-
+const handleModal = ()=>{
+    clearStorage()
+    navigate("/")
+}
     const [toggle, setToggle] = useState({
         player: true,
         status: "cart"
@@ -59,9 +70,9 @@ const Dashboard = () => {
         if (status == "cart") {
             setToggle(
                 {
-                gadget: true,
-                status: "cart"
-            })
+                    gadget: true,
+                    status: "cart"
+                })
         }
         else {
             setToggle({
@@ -73,11 +84,11 @@ const Dashboard = () => {
     return (
         <div>
             <div className='container mx-auto'>
-                <div class="hero bg-[#9538E2] text-white">
-                    <div class="hero-content text-center">
-                        <div class="max-w-md">
-                            <h1 class="text-5xl font-bold">Hello there</h1>
-                            <p class="py-6">
+                <div className="hero bg-[#9538E2] text-white">
+                    <div className="hero-content text-center">
+                        <div className="max-w-md">
+                            <h1 className="text-5xl font-bold">Hello there</h1>
+                            <p className="py-6">
                                 Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
                             </p>
 
@@ -94,9 +105,25 @@ const Dashboard = () => {
                     <p className='text-2xl font-bold'>Cart</p> : <p className='text-2xl font-bold'>Wishlist</p>}
                     {
                         toggle.gadget ?
-                            <div className='flex items-center gap-6'>
-                                <p className="text-xl">Total Cost: <span>0.00</span></p>
+                            <div className='lg:flex items-center gap-6'>
+                                <p className="text-xl">Total Cost: <span>{price.toFixed(2)}$</span></p>
                                 <button onClick={() => handleSort("price")} className='btn btn-primary rounded-4xl'>Sort by Price <span className='text-xl'><TbArrowsSort /></span></button>
+                                <button
+                                    onClick={() => document.getElementById('my_modal_1').showModal()} className="btn btn-success rounded-4xl px-6">Purchase</button>
+                                <dialog id="my_modal_1" className="modal ">
+                                    <div className="modal-box flex flex-col items-center">
+                                        <img className="my-2" src="/src/assets/Group.png" alt="" />
+                                        <h3 className="font-bold text-lg ">Payment Successfully</h3>
+                                        <p className="py-4">Thanks For Purchasing</p>
+                                        <p>Total: {price}$</p>
+                                        <div className="modal-action">
+                                            <form method="dialog">
+                                               
+                                                <button onClick={() => handleModal()} className="btn btn-wide btn-active rounded-4xl">Close</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </dialog>
 
                             </div> : ""
                     }

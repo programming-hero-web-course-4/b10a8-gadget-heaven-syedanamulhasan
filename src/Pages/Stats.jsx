@@ -4,13 +4,8 @@ import { useLocation } from 'react-router-dom';
 const Stats = () => {
     // const { pathname } = useLocation();
     return (
-        <div>
-            {/* {
-                pathname === '/statistics' &&
-                <div  className="container mx-auto bg-none">
-                    <h1 className='text-6xl'>Stats</h1>
-                </div>
-            } */}
+        <div className='container mx-auto my-10'>
+           <h1 className='text-3xl text-center font-bold'>Statistics</h1>
 
         </div>
     );

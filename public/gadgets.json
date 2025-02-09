@@ -151,6 +151,58 @@
       },
       "availability": false,
       "rating": 4.8
+    },
+    {
+      "product_id": 10,
+      "product_title": "Smartwatch Pro X",
+      "product_image": "https://i.ibb.co.com/C52Np8LH/x-watch-1-pro-24-11-24.jpg",
+      "category": "Smartwatch",
+      "price": 249.99,
+      "description": "The Smartwatch Pro X offers advanced health tracking, GPS, and seamless smartphone integration with a stunning AMOLED display.",
+      "Specification": {
+        "display": "1.78-inch AMOLED",
+        "battery_life": "Up to 10 days",
+        "water_resistance": "5ATM",
+        "connectivity": ["Bluetooth 5.2", "Wi-Fi", "NFC"],
+        "features": ["Heart Rate Monitor", "SpO2 Sensor", "Sleep Tracking", "GPS", "Voice Assistant"]
+      },
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 11,
+      "product_title": "Gaming Laptop X15",
+      "product_image": "https://i.ibb.co.com/Gv8d2QTK/intel-whitebook-gaming-laptop57.jpg",
+      "category": "Laptop",
+      "price": 1499.99,
+      "description": "A high-performance gaming laptop with a 15.6-inch 240Hz display, powerful GPU, and ultra-fast SSD storage for seamless gameplay.",
+      "Specification": {
+        "processor": "Intel Core i9 13th Gen",
+        "gpu": "NVIDIA RTX 4070",
+        "ram": "16GB DDR5",
+        "storage": "1TB NVMe SSD",
+        "display": "15.6-inch, 240Hz, Full HD",
+        "connectivity": ["WiFi 6E", "Bluetooth 5.2", "USB-C", "HDMI 2.1"]
+      },
+      "availability": false,
+      "rating": 4.9
+    },
+    {
+      "product_id": 12,
+      "product_title": "Fast Wireless Charging Pad",
+      "product_image": "https://i.ibb.co.com/21Tj5MZ1/61-FM6k-Xwd7-L-AC-SL1500.jpg",
+      "category": "Accessory",
+      "price": 59.99,
+      "description": "A sleek and fast wireless charging pad with 15W power delivery, compatible with all Qi-enabled devices.",
+      "Specification": {
+        "charging_speed": "15W Fast Charging",
+        "compatibility": ["iPhone", "Samsung Galaxy", "Google Pixel", "AirPods"],
+        "connectivity": "USB-C",
+        "material": "Aluminum & Tempered Glass",
+        "features": ["Overheat Protection", "Non-Slip Surface", "LED Charging Indicator"]
+      },
+      "availability": true,
+      "rating": 4.7
     }
   ]
   

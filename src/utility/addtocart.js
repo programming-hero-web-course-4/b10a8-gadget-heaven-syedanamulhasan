@@ -21,7 +21,7 @@ const addToCartList = (id) => {
         cartList.push(id);
         const cartListStr = JSON.stringify(cartList);
         localStorage.setItem("cart-list", cartListStr);
-        toast.success("Device Added Successfully")
+        toast.success("Device Added To The Cart Successfully")
     }
 }
 const removeCart = product_id =>{
@@ -31,4 +31,7 @@ const removeCart = product_id =>{
     localStorage.setItem("cart", JSON.stringify(remaining));
         toast.success("Device removed Successfully")
 }
-export { addToCartList, getCartList, removeCart }
+const clearStorage = () =>{
+    localStorage.clear()
+}
+export { addToCartList, getCartList, removeCart, clearStorage }

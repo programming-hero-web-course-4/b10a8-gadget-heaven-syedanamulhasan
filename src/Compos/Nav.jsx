@@ -46,7 +46,7 @@ const Nav = () => {
                                 {links}
                             </ul>
                         </div>
-                        <Link to='/'><a className="text-xl">Gadget Heaven</a></Link>
+                        <Link to='/'className="text-xl">Gadget Heaven</Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
