@@ -5,9 +5,7 @@ import React from 'react';
 const Stats = () => {
     return (
         <div>
-            {/* <Helmet>
-                <title>Statistics</title>
-            </Helmet> */}
+            
             <div className='container mx-auto my-10'>
            <h1 className='text-3xl text-center font-bold'>Statistics</h1>
 

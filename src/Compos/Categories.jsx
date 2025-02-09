@@ -2,13 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Categories = ({ categories }) => {
-    // console.log(categories)
-    // const [categories, setCategories] = useState([]);
-    // useEffect(() => {
-    //     fetch('categories.json')
-    //         .then(res => res.json())
-    //         .then(data => setCategories(data))
-    // }, [])
+    
     return (
         <div className="flex flex-col rounded-lg  border-gray-400 px-10 lg:space-y-15 space-y-2 py-8  bg-[#F6F6F6] h-fit shadow-lg">
             {

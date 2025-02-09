@@ -3,7 +3,7 @@ import { TbArrowsSort } from "react-icons/tb";
 
 import { useLoaderData, useNavigate } from 'react-router-dom';
 
-
+import group from '../assets/Group.png'
 
 import { clearStorage, getCartList, removeCart } from "../utility/addtocart";
 import Cart from "../Compos/Cart";
@@ -19,24 +19,24 @@ const Dashboard = () => {
     console.log(cart)
     const [wish, setWish] = useState([]);
     const [price, setPrice] = useState(0.00);
-    // console.log(wish)
+    
     const allGadgets = useLoaderData();
 
     useEffect(() => {
         const wishList = getWishList();
-        // console.log(wishList)
+      
         const wishItem = allGadgets.filter(gadget => wishList.includes(gadget.product_id))
-        // console.log(wishItem)
+       
         setWish(wishItem)
     }, [])
 
 
     useEffect(() => {
         const cartList = getCartList();
-        // console.log(cartList)
+       
         const cartItem = allGadgets.filter(gadget => cartList.includes(gadget.product_id))
 
-        // console.log(cartItem);
+        
         const cartPrice = cartItem.reduce((acc, cart) => acc + cart.price, 0)
         setPrice(cartPrice);
         setCart(cartItem)
@@ -117,7 +117,7 @@ const Dashboard = () => {
                                     onClick={() => document.getElementById('my_modal_1').showModal()} className="btn btn-success rounded-4xl px-6">Purchase</button>
                                 <dialog id="my_modal_1" className="modal ">
                                     <div className="modal-box flex flex-col items-center">
-                                        <img className="my-2" src="/src/assets/Group.png" alt="" />
+                                        <img className="my-2" src={group} alt="" />
                                         <h3 className="font-bold text-2xl lg:my-4">Payment Successfully</h3>
                                         <div className="w-4/5 text-center border-t-2 border-gray-300">
                                             <p className="py-4">Thanks For Purchasing</p>
